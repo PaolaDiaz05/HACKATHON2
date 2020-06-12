@@ -4,33 +4,117 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FORMULARIO</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+      
+            body {
+                text-align:center;
+                font-family: arial;
+            }
+      
+            form {
+                border: 1px solid #cdcdcd;
+                display: inline-block;
+                width: 100%;
+                max-width: 400px;
+                padding: 20px;
+                background: orange;
+                margin-top: 120px;
+            }
+            
+            select {
+                padding: 10px;
+                transition: all .5s ease;
+                border: 3px solid #cdcdcd;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            select:focus {
+                outline: none;
+                box-shadow: 0 0 10px #cdcdcd;
+            }
+            
+            select:invalid:focus {
+                border-color: red;
+            }
+      
+            select:valid {
+                border-color: green;
+            }
+
+            input {
+                padding: 10px;
+                transition: all .5s ease;
+                border: 3px solid #cdcdcd;
+                width: 100%;
+                max-width: 400px;  
+            }
+      
+            input:focus {
+                outline: none;
+                box-shadow: 0 0 10px #cdcdcd;
+            }
+            
+            input:invalid:focus {
+                border-color: red;
+            }
+      
+            input:valid {
+                border-color: green;
+            }
+      
+            button {
+                background-color: green;
+                padding: 10px;
+                color: white;
+                border: 1px solid green;
+                cursor: pointer;
+                width: 100%;
+                max-width: 400px;
+            }
+      
+            h1 {
+                color: white;
+                text-align: center;
+            }
+        </style>
+    
     </head>
+
     <body>
-        <h1>FORMULARIO</h1>
+
         <form action="#" method="GET">
 
+            <h1>FORMULARIO</h1>
             <label for="name">Nombre
-                <input name="name" id="name" type="text">
+                <input name="name" minlength="3" maxlength="15" id="name" type="text" required>
             </label>
             <br>
             <br>
             <label for="lastname">Apellidos
-                <input name="lastname" id="lastname" type="text">
+                <input name="lastname" minlength="3" maxlength="15" id="lastname" type="text" required>
             </label>
             <br>
             <br>
             <label for="age">Edad
-                <input name="age" id="age" type="number" placeholder="--">
+                <input name="age" min="16" max="65" id="age" type="number" placeholder="--" required>
             </label>
-            <label for="sex">Sexo
-                <input name="sex" id="sex" type="radio">F
-                <input name="sex" id="sex" type="radio">M
-            
+            <br>
+            <br>
+            <label for="sex">Sexo</label><br>
+            <label>
+                <input name="sex" id="sex" type="radio" required>F <br>
             </label>
+            <label>
+                <input name="sex" id="sex" type="radio" required>M
+            </label>   
             <br>
             <br>
             <label for="country">País
-                <select name="country" id="country">
+                <select name="country" id="country" required>
                     <option value="">--</option>
                     <option value="1">Argentina</option>
                     <option value="2">Chile</option>
@@ -39,9 +123,11 @@
                     <option value="5">Perú</option>
                     <option value="6">Venezuela</option>
                 </select>
+             <br>
+             <br>
             </label>
             <label for="distrit">Distrito
-                <select name="distrit" id="distrit">
+                <select name="distrit" id="distrit" required>
                     <option value="">--</option>
                     <option value="1">Miraflores</option>
                     <option value="2">Comas</option>
@@ -54,31 +140,37 @@
             <br>
             <br>
             <label for="celphone">Celular
-                <input name="celphone" id="celphone" type="number" placeholder="#########">
+                <input name="celphone" id="celphone" type="number" placeholder="#########" required>
             </label>
             <br>
             <br>
             <label for="date">Fecha Nac.
-                <input name="date"  type="date">
+                <input name="date" id="date" type="date" required>
             </label>
             <br>
             <br>
             <label for="email">e-mail
-                <input name="email" id="email" type="email" placeholder="micorreo@gmail.com">
+                <input name="email" id="email" type="email" placeholder="micorreo@gmail.com" required>
             </label>
             <br>
             <br>
-            <label for="pets">¿tiene mascotas?
-                <input name="pets" id="pets" type="radio">Si
-                <input name="pets" id="pets" type="radio">No
+            <label for="pets">Tiene mascotas?</label>
+            <label>
+                <input name="pets" id="pets" type="radio" required>Si
             </label>
+            <label>
+                <input name="pets" id="pets" type="radio" required>No
+            </label>         
             <br>
             <br>
             <label for="comment">Comentario</label><br>
-            <textarea name="comment" id="comment" cols="45" rows="15"></textarea>
+            <br>
+            <textarea name="comment" id="comment" cols="45" rows="15" required></textarea>
             <br>
             <br>
             <button>Enviar</button>
+            <br>
+            <br>
             <button>Reset</button>
         
         </form>
