@@ -1,0 +1,98 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <style>
+            * {
+            box-sizing: border-box;
+        }
+  
+        body {
+            text-align: center;
+            font-family: arial;
+        }
+  
+        form {
+            border: 1px solid #cdcdcd;
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: lightblue;
+            margin-top: 120px;
+        }
+  
+        input {
+            padding: 10px;
+            transition: all .5s ease;
+            border: 3px solid #cdcdcd;
+            width: 100%;
+            max-width: 400px;
+           
+        }
+  
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #cdcdcd;
+        }
+  
+        input:disabled,
+        input:read-only {
+            background: #cbcbcb;
+        }
+  
+        input:invalid:focus {
+            border-color: red;
+        }
+  
+        input:valid {
+            border-color: green;
+        }
+  
+        button {
+            background-color: gray;
+            padding: 10px;
+            color: white;
+            border: 1px solid gray;
+            width: 100%;
+            max-width: 400px;
+        }
+  
+        h1 {
+            color: white;
+        }
+        </style>
+    
+    </head>
+    <body>
+        <form action="#" method="GET">
+            <h2>FORMULARIO</h2>
+            <input pattern="[A-Za-z]" minlength="3" maxlength="15" name="name" type="text" placeholder="Nombre" required>
+            <br>
+            <br>
+            <input pattern="[A-Za-z]" minlength="3" maxlength="15" name="lastname" placeholder="Apellido" type="text" required>
+            <br>
+            <br>
+            <input min="18" max="80" name="age" placeholder="Edad" type="number" required>
+            <br>
+            <br>
+            <label for="sex">Sexo</label>
+            <input name="sex" type="radio" required>F
+            <input name="sex" type="radio" required>M
+            <br>
+            <br>
+            <input name="dni" type="text"required placeholder="DNI">
+            <br>
+            <br>
+            <input name="email" type="email" placeholder="Correo" required>
+            <br>
+            <br>
+            <button>Enviar</button>
+            <br>
+            <br>
+            <button>Reset</button>
+        </form>
+    </body>
+    </html>
