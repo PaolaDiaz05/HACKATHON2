@@ -4,6 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi Portafolio</title>
+        <style>
+            input:invalid:focus {
+            border-color: red;
+        }
+  
+            input:valid {
+            border-color: green;
+        }
+        </style>
     </head>
     <body>
         <main>
@@ -98,6 +107,26 @@
                     </figure>
                 </div>
             </section>
+            <br>
+            <form action="#" method="GET">
+                <section>
+                    <h2>Contacto</h2>
+                    <input  minlength="3" maxlength="15" name="name" type="text" placeholder="Nombre" required>
+                    <input  minlength="3" maxlength="15" name="lastname" placeholder="Apellido" type="text" required>
+                    <br>
+                    <br>
+                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="telephone" type="number" placeholder="Telefono" required>
+                    <br>
+                    <br>
+                    <textarea name="Description" cols="30" rows="10" placeholder="Descripción" required></textarea>
+                    <br>
+                    <br>
+                    <button>ENVIAR</button>
+                </section>
+
+            </form>
+            
         </main>
     </body>
     </html>
