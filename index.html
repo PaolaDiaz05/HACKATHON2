@@ -1,64 +1,78 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mi Portafolio</title>
-        <style>
-            input:invalid:focus {
-            border-color: red;
-        }
-  
-            input:valid {
-            border-color: green;
-        }
-        </style>
-    </head>
-    <body>
-        <main>
-            <section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+
+   </head>
+<body>
+    <main>
+        <!--Banner-->
+        <section class="banner">
+            <div class="box-banner">
                 <h1>Pachaqtec</h1>
-                <figure>
-                    <img src="./images/image 1.jpg" alt="baner">
-                </figure>
-                <h2>Hola, mi nombre es Sebastian Yabiku</h2>
-            </section>
-            <section>
+                <h2>Hola, mi nombre <br> es Sebastian Yabiku</h2>
+            </div>      
+        </section>
+
+        <!--About me-->
+        <section class="about">
+            <div class="about.me">
                 <h2>Sobre mi</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra habitasse</p>
-                <button>ver cv</button>
-                <a href="./cv.html"></a>
-            </section>
-            <br>
-            <section>
-                <h2>Mis Skills</h2>
-                <div>
+                <button class="see">Ver CV</button>
+            </div>
+        </section>
+
+        <!--skills-->
+        <section class="skills">
+            <h2>Mis Skills</h2>
+            <div class="items">
+                <div class="skills-item">
                     <h3>HTML</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-                <div>
+                <div class="skills-item">
                     <h3>CSS</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-                <div>
+                <div class="skills-item">
                     <h3>Javascript</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-                <div>
+                <div class="skills-item">
                     <h3>Vue</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-                <div>
+                <div class="skills-item">
                     <h3>Flexbox</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-                <div>
+                <div class="skills-item">
                     <h3>CSS Gird</h3>
-                    <div><div></div></div>    
+                    <div class="bar">
+                        <div></div>
+                    </div>    
                 </div>
-            </section>
-            <br>
-            <section>
+            </div>
+        </section>
+
+        <!--Portafolio-->
+        <section class="portafolio">
+            <div class="my-portafolio">
                 <h2>Portafolio</h2>
                 <div>
                     <figure>
@@ -88,9 +102,12 @@
                         <img src="./images/image.png" alt="">
                     </figure>
                 </div>
-            </section>
-            <br>
-            <section>
+            </div>      
+        </section>
+
+        <!--Clientes-->
+        <section class="clients">
+            <div class="image">
                 <h2>Clientes</h2>
                 <div>
                     <figure>
@@ -106,27 +123,27 @@
                         <img src="./images/1.png" alt="">
                     </figure>
                 </div>
-            </section>
-            <br>
-            <form action="#" method="GET">
-                <section>
-                    <h2>Contacto</h2>
-                    <input  minlength="3" maxlength="15" name="name" type="text" placeholder="Nombre" required>
-                    <input  minlength="3" maxlength="15" name="lastname" placeholder="Apellido" type="text" required>
-                    <br>
-                    <br>
-                    <input name="email" type="email" placeholder="Email" required>
-                    <input name="telephone" type="number" placeholder="Telefono" required>
-                    <br>
-                    <br>
-                    <textarea name="Description" cols="30" rows="10" placeholder="Descripción" required></textarea>
-                    <br>
-                    <br>
-                    <button>ENVIAR</button>
-                </section>
+            </div> 
+        </section>
 
-            </form>
-            
-        </main>
-    </body>
-    </html>
+        <!--Contacto-->
+        <section class="contact">
+                <form action="#" method="GET">
+                    <h2>Contacto</h2>
+                    <div class="my-contact"> 
+                        <input  minlength="3" maxlength="15" name="name" type="text" placeholder="Nombre" required>
+                        <input  minlength="3" maxlength="15" name="lastname" placeholder="Apellido" type="text" required>
+                        <br>
+                        <br>
+                        <input name="email" type="email" placeholder="Email" required>
+                        <input name="telephone" type="tel" placeholder="Telefono" required>
+                        <textarea name="Description" cols="110" rows="5" placeholder="Descripción" required></textarea>
+                        <br>
+                        <br>
+                        <button class="send">ENVIAR</button>                 
+                    </div>
+                </form>
+        </section>  
+    </main>
+</body>
+</html>
